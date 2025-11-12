@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>غرس - نزرع الجمال في حياتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌿</span>
+                    <div>
+                        <h1 class="logo-title">غرس</h1>
+                        <p class="logo-subtitle">نزرع الجمال في حياتك</p>
+                    </div>
+                </div>
+                
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link active">الرئيسية</a>
+                    <a href="products.html" class="nav-link">المتجر</a>
+                    <a href="#garden-design" class="nav-link">تصميم الحدائق</a>
+                    <a href="#subscription" class="nav-link">خدمات الصيانة</a>
+                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">نزرع الجمال في كل زاوية</h2>
+                <p class="hero-text">
+                    نوفر لك أفضل النباتات المنزلية والخارجية، مع خدمات تصميم الحدائق والعناية الدورية
+                </p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">تصفح المتجر</a>
+                    <a href="#garden-design" class="btn btn-secondary">صمم حديقتك</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon green">🌱</div>
+                    <h3 class="feature-title">نباتات عالية الجودة</h3>
+                    <p class="feature-text">نختار لك أفضل أنواع النباتات الصحية والقوية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue">💧</div>
+                    <h3 class="feature-title">تصميم حدائق احترافي</h3>
+                    <p class="feature-text">فريق متخصص في تصميم الحدائق بأسلوب عصري</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon amber">📅</div>
+                    <h3 class="feature-title">خدمة صيانة دورية</h3>
+                    <p class="feature-text">نعتني بحديقتك ونباتاتك بشكل منتظم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Preview -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">منتجات مميزة</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🌵</div>
+                    <h3 class="product-name">صبار الألوفيرا</h3>
+                    <p class="product-desc">نبات منزلي سهل العناية</p>
+                    <div class="product-footer">
+                        <span class="product-price">45 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🌴</div>
+                    <h3 class="product-name">نخلة الأريكا</h3>
+                    <p class="product-desc">مثالي للمساحات الواسعة</p>
+                    <div class="product-footer">
+                        <span class="product-price">120 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪴</div>
+                    <h3 class="product-name">نبات الزينة</h3>
+                    <p class="product-desc">يضيف جمالاً لمنزلك</p>
+                    <div class="product-footer">
+                        <span class="product-price">65 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="products.html" class="btn btn-primary">عرض جميع المنتجات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garden Design Section -->
+    <section id="garden-design" class="garden-design">
+        <div class="container">
+            <div class="garden-content">
+                <h2 class="section-title-white">خدمة تصميم الحدائق</h2>
+                <p class="garden-text">
+                    فريقنا المتخصص يصمم لك حديقة أحلامك بأسلوب عصري يناسب ذوقك ومساحتك
+                </p>
+                <div class="garden-steps">
+                    <h3 class="steps-title">كيف نعمل؟</h3>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 class="step-title">أرسل لنا مساحة حديقتك</h4>
+                            <p class="step-text">قم بإرسال صور ومقاسات الحديقة</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 class="step-title">نصمم لك الحديقة</h4>
+                            <p class="step-text">فريقنا يقدم لك تصميم ثلاثي الأبعاد</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 class="step-title">التنفيذ والتركيب</h4>
+                            <p class="step-text">ننفذ التصميم ونزرع النباتات المناسبة</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary-white">احجز استشارة مجانية</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section id="subscription" class="subscription">
+        <div class="container">
+            <h2 class="section-title">خطط الصيانة والعناية</h2>
+            <p class="section-subtitle">
+                اختر الخطة المناسبة لك ودع فريقنا يعتني بحديقتك ونباتاتك
+            </p>
+            
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">العناية الأسبوعية</h3>
+                    <div class="plan-price">
+                        <span class="price">150</span>
+                        <span class="period">ر.س / أسبوعياً</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>زيارة أسبوعية</li>
+                        <li>سقي النباتات</li>
+                        <li>فحص الصحة</li>
+                        <li>تقليم خفيف</li>
+                    </ul>
+                    <button class="btn btn-primary">اشترك الآن</button>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="plan-badge">الأكثر طلباً</div>
+                    <h3 class="plan-name">العناية الشهرية</h3>
+                    <div class="plan-price">
+                        <span class="price">400</span>
+                        <span class="period">ر.س / شهرياً</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>زيارتان شهرياً</li>
+                        <li>سقي وتسميد</li>
+                        <li>فحص شامل</li>
+                        <li>تقليم وتنظيف</li>
+                        <li>استشارة مجانية</li>
+                    </ul>
+                    <button class="btn btn-primary">اشترك الآن</button>
+                </div>
+                
+                <div class="plan-card">
+                    <h3 class="plan-name">العناية الموسمية</h3>
+                    <div class="plan-price">
+                        <span class="price">1000</span>
+                        <span class="period">ر.س / كل 3 شهور</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>4 زيارات في الموسم</li>
+                        <li>عناية شاملة</li>
+                        <li>تسميد متخصص</li>
+                        <li>تجديد التربة</li>
+                        <li>ضمان الصحة</li>
+                    </ul>
+                    <button class="btn btn-primary">اشترك الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3 class="contact-label">الهاتف</h3>
+                            <p class="contact-value" dir="ltr">+966 50 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3 class="contact-label">البريد الإلكتروني</h3>
+                            <p class="contact-value">info@ghars.sa</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3 class="contact-label">الموقع</h3>
+                            <p class="contact-value">الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3 class="form-title">أرسل لنا رسالة</h3>
+                    <div class="contact-form">
+                        <input type="text" placeholder="الاسم" class="form-input">
+                        <input type="email" placeholder="البريد الإلكتروني" class="form-input">
+                        <textarea placeholder="رسالتك" rows="4" class="form-input"></textarea>
+                        <button class="btn btn-primary">إرسال</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌿</span>
+                    <h3>غرس</h3>
+                </div>
+                <p class="footer-tagline">نزرع الجمال في حياتك 🌿</p>
+                <p class="footer-copyright">© 2024 غرس. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
