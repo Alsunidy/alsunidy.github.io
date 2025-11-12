@@ -1,6 +1,29 @@
 // Cart functionality
 let cartCount = 0;
 
+// Load cart count from localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    const savedCart = localStorage.getItem('gharsCart');
+    if (savedCart) {
+        const cartItems = JSON.parse(savedCart);
+        cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    } else {
+        const savedCartCount = localStorage.getItem('gharsCartCount');
+        if (savedCartCount) {
+            cartCount = parseInt(savedCartCount);
+        }
+    }
+    updateCartCount();
+});
+
+// Cart button click - redirect to cart page
+const cartBtn = document.getElementById('cartBtn');
+if (cartBtn) {
+    cartBtn.addEventListener('click', () => {
+        window.location.href = 'cart.html';
+    });
+}
+
 function addToCart() {
     cartCount++;
     updateCartCount();
@@ -155,8 +178,8 @@ function updateCartCount() {
     const cartCountElement = document.getElementById('cartCount');
     if (cartCountElement) {
         cartCountElement.textContent = cartCount;
-        localStorage.setItem('gharsCartCount', cartCount);
     }
+    // Don't save to localStorage here - cart.js handles it
 }
 
 // Form validation (for contact form)
