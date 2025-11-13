@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - غرس</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌿</span>
+                    <div>
+                        <h1 class="logo-title">غرس</h1>
+                        <p class="logo-subtitle">نزرع الجمال في حياتك</p>
+                    </div>
+                </div>
+                
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="products.html" class="nav-link active">المتجر</a>
+                    <a href="index.html#garden-design" class="nav-link">تصميم الحدائق</a>
+                    <a href="index.html#subscription" class="nav-link">خدمات الصيانة</a>
+                    <a href="index.html#contact" class="nav-link">تواصل معنا</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html" class="breadcrumb-link">الرئيسية</a>
+            <span class="breadcrumb-separator">←</span>
+            <a href="products.html" class="breadcrumb-link">المتجر</a>
+            <span class="breadcrumb-separator">←</span>
+            <span class="breadcrumb-current" id="productNameBreadcrumb">صبار الألوفيرا</span>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image" id="mainImage">
+                        <div class="product-badge">جديد</div>
+                        🌵
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active" onclick="changeImage('🌵')">🌵</div>
+                        <div class="thumbnail" onclick="changeImage('🪴')">🪴</div>
+                        <div class="thumbnail" onclick="changeImage('🌿')">🌿</div>
+                        <div class="thumbnail" onclick="changeImage('🍃')">🍃</div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-category">نباتات منزلية</div>
+                    <h1 class="product-title" id="productTitle">صبار الألوفيرا</h1>
+                    
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-text">(4.8 من 5) - 124 تقييم</span>
+                    </div>
+
+                    <div class="product-price-section">
+                        <span class="current-price" id="currentPrice">45 ر.س</span>
+                        <span class="old-price">60 ر.س</span>
+                        <span class="discount-badge">خصم 25%</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>الوصف</h3>
+                        <p>
+                            نبات الألوفيرا من أفضل النباتات المنزلية التي تتميز بسهولة العناية وفوائدها العديدة.
+                            يساعد على تنقية الهواء ويمكن استخدامه للعناية بالبشرة والشعر. مثالي للمبتدئين ولا يحتاج
+                            إلى الكثير من الماء أو الضوء.
+                        </p>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>المميزات</h3>
+                        <ul>
+                            <li>✓ سهل العناية والصيانة</li>
+                            <li>✓ ينقي الهواء بشكل طبيعي</li>
+                            <li>✓ لا يحتاج للكثير من الماء</li>
+                            <li>✓ يتحمل درجات الحرارة المختلفة</li>
+                            <li>✓ مناسب للمبتدئين</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-specs">
+                        <h3>المواصفات</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">الارتفاع:</span>
+                                <span class="spec-value">30-40 سم</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">حجم الأصيص:</span>
+                                <span class="spec-value">متوسط</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">الإضاءة:</span>
+                                <span class="spec-value">غير مباشرة</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">الري:</span>
+                                <span class="spec-value">مرة كل أسبوعين</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label>الكمية:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="changeQuantity(-1)">-</button>
+                                <span class="qty-display" id="quantity">1</span>
+                                <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-add-to-cart" onclick="addProductToCart()">
+                            أضف إلى السلة
+                        </button>
+                        
+                        <button class="btn btn-secondary btn-buy-now" onclick="buyNow()">
+                            اشتر الآن
+                        </button>
+                    </div>
+
+                    <div class="product-delivery">
+                        <div class="delivery-item">
+                            <span class="delivery-icon">🚚</span>
+                            <div>
+                                <strong>توصيل سريع</strong>
+                                <p>خلال 2-3 أيام عمل</p>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <span class="delivery-icon">↩️</span>
+                            <div>
+                                <strong>استرجاع مجاني</strong>
+                                <p>خلال 7 أيام</p>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <span class="delivery-icon">💚</span>
+                            <div>
+                                <strong>ضمان الجودة</strong>
+                                <p>نباتات صحية 100%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Instructions -->
+    <section class="care-section">
+        <div class="container">
+            <h2 class="section-title">إرشادات العناية</h2>
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">☀️</div>
+                    <h3>الإضاءة</h3>
+                    <p>يفضل الضوء الساطع غير المباشر. تجنب أشعة الشمس المباشرة التي قد تحرق الأوراق.</p>
+                </div>
+                <div class="care-card">
+                    <div class="care-icon">💧</div>
+                    <h3>الري</h3>
+                    <p>اسقِ النبات مرة كل أسبوعين. انتظر حتى تجف التربة تماماً قبل الري مجدداً.</p>
+                </div>
+                <div class="care-card">
+                    <div class="care-icon">🌡️</div>
+                    <h3>الحرارة</h3>
+                    <p>يتحمل درجات حرارة من 15-30 درجة مئوية. احمه من البرد الشديد.</p>
+                </div>
+                <div class="care-card">
+                    <div class="care-icon">✂️</div>
+                    <h3>التقليم</h3>
+                    <p>قم بإزالة الأوراق الجافة أو التالفة بانتظام للحفاظ على مظهر جميل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">آراء العملاء</h2>
+            
+            <div class="reviews-summary">
+                <div class="summary-score">
+                    <div class="score-number">4.8</div>
+                    <div class="score-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="score-text">من 124 تقييم</div>
+                </div>
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <span>5 نجوم</span>
+                        <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
+                        <span>85%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 نجوم</span>
+                        <div class="bar"><div class="bar-fill" style="width: 10%"></div></div>
+                        <span>10%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 نجوم</span>
+                        <div class="bar"><div class="bar-fill" style="width: 3%"></div></div>
+                        <span>3%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 نجوم</span>
+                        <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                        <span>1%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 نجمة</span>
+                        <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                        <span>1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">س</div>
+                            <div>
+                                <div class="reviewer-name">سارة أحمد</div>
+                                <div class="review-date">منذ أسبوعين</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">
+                        نبات رائع وجودة ممتازة! وصل بحالة جيدة جداً والتغليف كان محترف. 
+                        سهل العناية به ويضيف لمسة جميلة للمنزل. أنصح بالشراء من غرس 💚
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">م</div>
+                            <div>
+                                <div class="reviewer-name">محمد العتيبي</div>
+                                <div class="review-date">منذ شهر</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">
+                        ممتاز جداً! النبات صحي وقوي. الخدمة سريعة والتوصيل في الوقت المحدد.
+                        هذا ثاني طلب لي من المتجر وما راح يكون الأخير 🌿
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ن</div>
+                            <div>
+                                <div class="reviewer-name">نورة الدوسري</div>
+                                <div class="review-date">منذ شهرين</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">
+                        النبات جميل والسعر مناسب. كنت أتمنى يكون حجمه أكبر شوي لكن بشكل عام راضية عنه.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="section-title">منتجات مشابهة</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🌴</div>
+                    <h3 class="product-name">نخلة الأريكا</h3>
+                    <p class="product-desc">مثالي للمساحات الواسعة</p>
+                    <div class="product-footer">
+                        <span class="product-price">120 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪴</div>
+                    <h3 class="product-name">نبات الزينة</h3>
+                    <p class="product-desc">يضيف جمالاً لمنزلك</p>
+                    <div class="product-footer">
+                        <span class="product-price">65 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🌱</div>
+                    <h3 class="product-name">نبات الثعبان</h3>
+                    <p class="product-desc">مقاوم ولا يحتاج عناية كثيرة</p>
+                    <div class="product-footer">
+                        <span class="product-price">60 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🌿</div>
+                    <h3 class="product-name">نبات البوتس</h3>
+                    <p class="product-desc">ينقي الهواء بشكل طبيعي</p>
+                    <div class="product-footer">
+                        <span class="product-price">50 ر.س</span>
+                        <button class="btn-add-cart" onclick="addToCart()">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌿</span>
+                    <h3>غرس</h3>
+                </div>
+                <p class="footer-tagline">نزرع الجمال في حياتك 🌿</p>
+                <p class="footer-copyright">© 2024 غرس. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+</html>
