@@ -3,10 +3,10 @@ let cartItems = [];
 
 // Sample products for demonstration
 const sampleProducts = [
-    { id: 1, name: 'صبار الألوفيرا', price: 45, image: '🌵' },
-    { id: 2, name: 'نخلة الأريكا', price: 120, image: '🌴' },
-    { id: 3, name: 'نبات الزينة', price: 65, image: '🪴' },
-    { id: 4, name: 'شجيرة الورد', price: 85, image: '🌹' }
+    { id: 1, name: 'صبار الألوفيرا', price: 45, image: 'images/aloe-vera.jpg' },
+    { id: 2, name: 'نخلة الأريكا', price: 120, image: 'images/areca-palm.jpg' },
+    { id: 3, name: 'نبات الزينة', price: 65, image: 'images/decorative-plant.jpg' },
+    { id: 4, name: 'شجيرة الورد', price: 85, image: 'images/rose-shrub.jpg' }
 ];
 
 // Initialize cart on page load

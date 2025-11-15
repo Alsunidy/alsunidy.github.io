@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>غرس - نزرع الجمال في حياتك</title>
+    <title>ليف - نزرع الجمال في حياتك</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +12,11 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <span class="logo-icon">🌿</span>
+                    <span class="logo-icon" style="display:inline-block; width:48px; height:48px; overflow:hidden; border-radius:8px;">
+                        <img src="images/logo.jpg" alt="Logo" style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </span>
                     <div>
-                        <h1 class="logo-title">غرس</h1>
+                        <h1 class="logo-title">ليف</h1>
                         <p class="logo-subtitle">نزرع الجمال في حياتك</p>
                     </div>
                 </div>
@@ -87,8 +89,9 @@
             <h2 class="section-title">منتجات مميزة</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="images/aloe-vera.jpg" alt="صبار الألوفيرا">
-                    
+                    <div class="product-image">
+                        <img src="images/aloe-vera.jpg" alt="صبار الألوفيرا">
+                    </div>
                     <h3 class="product-name">صبار الألوفيرا</h3>
                     <p class="product-desc">نبات منزلي سهل العناية</p>
                     <div class="product-footer">
@@ -97,7 +100,9 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🌴</div>
+                    <div class="product-image">
+                        <img src="images/areca-palm.jpg" alt="نخلة الأريكا">
+                    </div>
                     <h3 class="product-name">نخلة الأريكا</h3>
                     <p class="product-desc">مثالي للمساحات الواسعة</p>
                     <div class="product-footer">
@@ -106,7 +111,9 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🪴</div>
+                    <div class="product-image">
+                        <img src="images/decorative-plant.jpg" alt="نبات الزينة">
+                    </div>
                     <h3 class="product-name">نبات الزينة</h3>
                     <p class="product-desc">يضيف جمالاً لمنزلك</p>
                     <div class="product-footer">
@@ -152,7 +159,7 @@
                             <p class="step-text">ننفذ التصميم ونزرع النباتات المناسبة</p>
                         </div>
                     </div>
-                    <button class="btn btn-primary-white">احجز استشارة مجانية</button>
+                    <button class="btn btn-primary-white" onclick="openConsultationModal()">احجز استشارة مجانية</button>
                 </div>
             </div>
         </div>
@@ -235,7 +242,7 @@
                         <div class="contact-icon">✉️</div>
                         <div>
                             <h3 class="contact-label">البريد الإلكتروني</h3>
-                            <p class="contact-value">info@ghars.sa</p>
+                            <p class="contact-value">info@leaf.sa</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -264,14 +271,65 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-icon">🌿</span>
-                    <h3>غرس</h3>
+                    <span class="logo-icon" style="display:inline-block; width:48px; height:48px; overflow:hidden; border-radius:8px;">
+                        <img src="images/logo.jpg" alt="Logo" style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </span>
+                    <h3>ليف</h3>
                 </div>
-                <p class="footer-tagline">نزرع الجمال في حياتك 🌿</p>
-                <p class="footer-copyright">© 2024 غرس. جميع الحقوق محفوظة</p>
+                <p class="footer-tagline">نزرع الجمال في حياتك </p>
+                <p class="footer-copyright">© 2025 ليف. جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeConsultationModal()">&times;</button>
+            <h2 class="modal-title">احجز استشارة مجانية</h2>
+            <p class="modal-subtitle">املأ البيانات وسنتواصل معك خلال 24 ساعة</p>
+            
+            <div class="consultation-form">
+                <div class="form-group">
+                    <label>الاسم الكامل *</label>
+                    <input type="text" id="consultName" class="form-input" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>رقم الجوال *</label>
+                    <input type="tel" id="consultPhone" class="form-input" placeholder="05xxxxxxxx" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>البريد الإلكتروني</label>
+                    <input type="email" id="consultEmail" class="form-input" placeholder="example@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>نوع الخدمة *</label>
+                    <select id="consultService" class="form-input">
+                        <option value="">اختر الخدمة</option>
+                        <option value="garden-design">تصميم حديقة</option>
+                        <option value="maintenance">صيانة دورية</option>
+                        <option value="consultation">استشارة نباتية</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>مساحة الحديقة (تقريبية)</label>
+                    <input type="text" id="consultArea" class="form-input" placeholder="مثال: 50 متر مربع">
+                </div>
+                
+                <div class="form-group">
+                    <label>تفاصيل إضافية</label>
+                    <textarea id="consultDetails" class="form-input" rows="4" placeholder="أخبرنا المزيد عن احتياجاتك..."></textarea>
+                </div>
+                
+                <button class="btn btn-primary" onclick="submitConsultation()">إرسال الطلب</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
